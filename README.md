@@ -1,5 +1,5 @@
 <h1 align="center">
-  🚀 Murilo Reis
+  Murilo Reis
 </h1>
 
 <h3 align="center">
@@ -14,7 +14,6 @@
 
 ## 🧠 WHO AM I?
 🎯 **Name:** Murilo Reis  
-🎂 **Age:** 22  
 🍎 **Currently working at Apple**  
 💼 **Data Analyst Freelancer (Global Clients)**  
 🌍 **Remote-friendly | Business-driven | Results-focused**
