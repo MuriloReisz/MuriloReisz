@@ -52,14 +52,14 @@
 
 ## 🏆 GitHub Trophies
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MuriloReisz&theme=tokyonight&no-frame=true&row=1&column=5" />
+  <img src="https://github-profile-trophy.vercel.app/?username=MuriloReisz&theme=flat&no-frame=true&column=4" />
 </p>
 
 <br/>
 
 ## 📊 GitHub Stats
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MuriloReisz&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=86400" />
+  <img src="https://github-readme-stats.vercel.app/api?username=MuriloReisz&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=86400" />
 </p>
 
 <p align="center">
