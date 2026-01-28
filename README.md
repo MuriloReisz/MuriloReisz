@@ -8,16 +8,16 @@
   <img src="https://komarev.com/ghpvc/?username=MuriloReisz&style=for-the-badge&color=blueviolet" />
 </p>
 
-<br/>
+---
 
 ## 🧠 About Me
-- 📊 **Data Analyst Freelancer**
-- 🍎 **Currently working at Apple**
-- 💼 Helping businesses make **data-driven decisions**
-- 🌍 Remote | Global clients | Business-focused analytics
-- 🧠 Strong in data cleaning, insights & storytelling
+- 📊 **Data Analyst Freelancer**  
+- 🍎 **Currently working at Apple**  
+- 💼 Helping businesses make **data-driven decisions**  
+- 🌍 Remote | Global clients | Business-focused analytics  
+- 🧠 Strong in data cleaning, insights & storytelling  
 
-<br/>
+---
 
 ## 💼 What I Do
 - Data Cleaning & Transformation  
@@ -27,7 +27,7 @@
 - Dashboards (Power BI / Tableau / Excel)  
 - KPI Tracking & Business Reports  
 
-<br/>
+---
 
 ## 🛠️ Tech Stack
 <p align="center">
@@ -40,40 +40,42 @@
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
 </p>
 
-<br/>
+---
 
 ## 📌 Featured Work
-- 📈 **Sales Performance Dashboards**
-- 🧮 **SQL Business Queries**
-- 🐍 **Python Data Cleaning Pipelines**
-- 📊 **Operational & Marketing Insights**
+- 📈 **Sales Performance Dashboards**  
+- 🧮 **SQL Business Queries**  
+- 🐍 **Python Data Cleaning Pipelines**  
+- 📊 **Operational & Marketing Insights**  
 
-<br/>
+➡️ Check my repositories below 👇
 
-## 🏆 GitHub Trophies
+---
+
+## 📊 GitHub Stats (Stable Version)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MuriloReisz&show_icons=true&theme=tokyonight&count_private=true&cache_seconds=86400" />
+</p>
+
+---
+
+## 🏆 GitHub Trophies (Stable Version)
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=MuriloReisz&theme=flat&no-frame=true&column=4" />
 </p>
 
-<br/>
+> ⚡ These versions are **stable and cached** — no 503 or paused deployment issues.
 
-## 📊 GitHub Stats
+---
+
+## 🎧 Now Playing on Spotify (Stable)
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MuriloReisz&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=86400" />
+  <img src="https://spotify-github-profile.vercel.app/api/view?uid=pescadkr&cover_image=true&theme=default&show_offline=true" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MuriloReisz&theme=tokyonight&hide_border=true" />
-</p>
+> ✅ Make sure you’ve logged in via [Spotify GitHub Profile](https://github.com/kittinan/spotify-github-profile) once to refresh your token.
 
-<br/>
-
-## 🎧 Spotify (Last Played)
-<p align="center">
-  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=pescadkr&cover_image=true&theme=compact&show_offline=true" />
-</p>
-
-<br/>
+---
 
 ## 🌐 Connect With Me
 <p align="center">
@@ -85,7 +87,7 @@
   </a>
 </p>
 
-<br/>
+---
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1200&center=true&vCenter=true&width=600&lines=Data+never+lies;Insights+drive+growth;Execution+beats+ideas" />
