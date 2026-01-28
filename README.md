@@ -51,26 +51,28 @@
 ➡️ Check my repositories below 👇
 
 ---
-
-## 📊 GitHub Stats (Stable Version)
+## 📊 GitHub Stats
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=MuriloReisz&show_icons=true&theme=tokyonight&count_private=true&cache_seconds=86400" />
 </p>
 
 ---
-
-## 🏆 GitHub Trophies (Stable Version)
+## 🏆 Achievements
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MuriloReisz&theme=flat&no-frame=true&column=4" />
+  <img src="https://img.shields.io/badge/GitHub-Top%20Repositories-blue?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/GitHub-Contributions-green?style=for-the-badge&logo=github" />
+  <img src="https://img.shields.io/badge/GitHub-Followers-black?style=for-the-badge&logo=github" />
 </p>
 
 > ⚡ These versions are **stable and cached** — no 503 or paused deployment issues.
 
 ---
 
-## 🎧 Now Playing on Spotify (Stable)
+## 🎧 Currently Listening
 <p align="center">
-  <img src="https://spotify-github-profile.vercel.app/api/view?uid=pescadkr&cover_image=true&theme=default&show_offline=true" />
+  <a href="https://open.spotify.com/user/pescadkr">
+    <img src="https://img.shields.io/badge/Spotify-See+My+Music-1DB954?style=for-the-badge&logo=spotify&logoColor=white"/>
+  </a>
 </p>
 
 > ✅ Make sure you’ve logged in via [Spotify GitHub Profile](https://github.com/kittinan/spotify-github-profile) once to refresh your token.
