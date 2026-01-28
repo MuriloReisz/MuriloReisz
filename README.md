@@ -1,4 +1,4 @@
-<h1 align="center">🚀 Murilo Reis</h1>
+<h1 align="center">Murilo Reis</h1>
 
 <h3 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=900&center=true&vCenter=true&width=800&lines=Data+Analyst+Freelancer;Apple+Employee+🍎;SQL+%7C+Python+%7C+Power+BI+%7C+Excel;Turning+Data+Into+Business+Decisions;Clean+Data.+Clear+Insights." />
@@ -82,7 +82,7 @@
   <a href="https://www.linkedin.com/in/murilo-reis-356b01207/">
     <img src="https://img.shields.io/badge/LinkedIn-Murilo%20Reis-blue?style=for-the-badge&logo=linkedin" />
   </a>
-  <a href="mailto:your@email.com">
+  <a href="mailto:muriloarielreisz@gmail.com">
     <img src="https://img.shields.io/badge/Email-Let's%20Work%20Together-red?style=for-the-badge&logo=gmail" />
   </a>
 </p>
