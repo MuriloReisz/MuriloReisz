@@ -68,10 +68,10 @@
 
 ---
 
-## 🎧 Currently Listening
+## 🎧 Spotify
 <p align="center">
   <a href="https://open.spotify.com/user/pescadkr">
-    <img src="https://img.shields.io/badge/Spotify-See+My+Music-1DB954?style=for-the-badge&logo=spotify&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Spotify-Now%20Playing-1DB954?style=for-the-badge&logo=spotify&logoColor=white"/>
   </a>
 </p>
 
