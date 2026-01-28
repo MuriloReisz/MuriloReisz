@@ -1,39 +1,35 @@
-<h1 align="center">
-  Murilo Reis
-</h1>
+<h1 align="center">🚀 Murilo Reis</h1>
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=800&center=true&vCenter=true&width=800&lines=Data+Analyst+Freelancer;Apple+Employee+🍎;22+Years+Old;SQL+%7C+Python+%7C+Power+BI+%7C+Excel;Turning+Data+Into+Business+Decisions;Obsessed+With+Insights+%26+Performance" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=900&center=true&vCenter=true&width=800&lines=Data+Analyst+Freelancer;Apple+Employee+🍎;SQL+%7C+Python+%7C+Power+BI+%7C+Excel;Turning+Data+Into+Business+Decisions;Clean+Data.+Clear+Insights." />
 </h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?MuriloReisz&label=Profile%20Views&color=blueviolet&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=MuriloReisz&style=for-the-badge&color=blueviolet" />
 </p>
 
 ---
 
-## 🧠 WHO AM I?
-🎯 **Name:** Murilo Reis  
-🍎 **Currently working at Apple**  
-💼 **Data Analyst Freelancer (Global Clients)**  
-🌍 **Remote-friendly | Business-driven | Results-focused**
-
-I specialize in **extracting insights from complex datasets**, building **clean dashboards**, and helping businesses **make smarter, data-backed decisions**.
-
----
-
-## 💼 WHAT I DO
-✅ Data Cleaning & Transformation  
-✅ Exploratory Data Analysis (EDA)  
-✅ SQL Queries & Database Optimization  
-✅ Python Automation & Analytics  
-✅ Dashboard Creation (Power BI / Tableau / Excel)  
-✅ KPI Tracking & Business Reports  
-✅ Decision Support & Data Storytelling  
+## 🧠 About Me
+- 📊 **Data Analyst Freelancer**
+- 🍎 **Currently working at Apple**
+- 💼 Helping businesses make **data-driven decisions**
+- 🌍 Remote | Global clients | Business-focused analytics
+- 🧠 Strong in data cleaning, insights & storytelling
 
 ---
 
-## 🛠️ TECH STACK (THE WEAPONS)
+## 💼 What I Do
+- Data Cleaning & Transformation  
+- Exploratory Data Analysis (EDA)  
+- SQL Queries & Database Analysis  
+- Python for Automation & Analytics  
+- Dashboards (Power BI / Tableau / Excel)  
+- KPI Tracking & Business Reports  
+
+---
+
+## 🛠️ Tech Stack
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,mysql,postgres,git,github,vscode" />
 </p>
@@ -46,55 +42,42 @@ I specialize in **extracting insights from complex datasets**, building **clean 
 
 ---
 
-## 📊 FREELANCER FOCUS
-💡 I help companies:
-- Increase **revenue**
-- Reduce **operational costs**
-- Improve **decision speed**
-- Visualize **hidden patterns**
-- Track **KPIs that actually matter**
+## 📌 Featured Work
+- 📈 **Sales Performance Dashboards**
+- 🧮 **SQL Business Queries**
+- 🐍 **Python Data Cleaning Pipelines**
+- 📊 **Operational & Marketing Insights**
 
-If your data is messy — **I fix it**.  
-If your dashboards are confusing — **I redesign them**.
+➡️ Check my repositories below 👇
 
 ---
 
-## 📌 FEATURED PROJECTS
-🔹 **Sales Performance Dashboard** – Power BI dashboard tracking KPIs  
-🔹 **Customer Segmentation Analysis** – Python + SQL  
-🔹 **Operational Cost Analysis** – Excel & Automation  
-🔹 **Marketing Funnel Insights** – SQL + Visualization  
-
-➡️ Explore my repositories 👇
-
----
-
-## 🏆 GITHUB TROPHIES
+## 🏆 GitHub Trophies
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?MuriloReisz&theme=tokyonight&no-frame=true&row=1&column=7" />
+  <img src="https://github-profile-trophy.vercel.app/?username=MuriloReisz&theme=tokyonight&no-frame=true&row=1&column=6" />
 </p>
 
 ---
 
-## 📊 GITHUB STATS
+## 📊 GitHub Stats
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?MuriloReisz&show_icons=true&theme=tokyonight&rank_icon=github" />
+  <img src="https://github-readme-stats.vercel.app/api?username=MuriloReisz&show_icons=true&theme=tokyonight&hide_border=true" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?MuriloReisz&theme=tokyonight" />
-</p>
-
----
-
-## 🐍 CONTRIBUTION SNAKE (BECAUSE WHY NOT)
-<p align="center">
-  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/github-contribution-grid-snake.svg" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=MuriloReisz&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
 
-## 🌐 CONNECT WITH ME
+## 🎧 Now Playing on Spotify
+<p align="center">
+  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=pescadkr&cover_image=true&theme=default&show_offline=true&background_color=000000" />
+</p>
+
+---
+
+## 🌐 Connect With Me
 <p align="center">
   <a href="https://www.linkedin.com/in/murilo-reis-356b01207/">
     <img src="https://img.shields.io/badge/LinkedIn-Murilo%20Reis-blue?style=for-the-badge&logo=linkedin" />
@@ -107,5 +90,5 @@ If your dashboards are confusing — **I redesign them**.
 ---
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=900&center=true&vCenter=true&width=700&lines=Data+never+lies.;Insights+drive+growth.;Execution+beats+ideas.;Consistency+creates+masters." />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=900&center=true&vCenter=true&width=700&lines=Data+never+lies.;Insights+drive+growth.;Execution+beats+ideas." />
 </p>
