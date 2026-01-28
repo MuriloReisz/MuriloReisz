@@ -22,7 +22,7 @@ I specialize in **extracting insights from complex datasets**, building **clean 
 
 ---
 
-## 💼 WHAT I DO (AND DO WELL)
+## 💼 WHAT I DO
 ✅ Data Cleaning & Transformation  
 ✅ Exploratory Data Analysis (EDA)  
 ✅ SQL Queries & Database Optimization  
@@ -82,14 +82,14 @@ If your dashboards are confusing — **I redesign them**.
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?MuriloReisz&theme=tokyonight" />
 </p>
 
 ---
 
 ## 🐍 CONTRIBUTION SNAKE (BECAUSE WHY NOT)
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake.svg" />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/github-contribution-grid-snake.svg" />
 </p>
 
 ---
