@@ -7,7 +7,7 @@
 </h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=Profile%20Views&color=blueviolet&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?MuriloReisz&label=Profile%20Views&color=blueviolet&style=for-the-badge" />
 </p>
 
 ---
@@ -72,14 +72,14 @@ If your dashboards are confusing — **I redesign them**.
 
 ## 🏆 GITHUB TROPHIES
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=YOUR_USERNAME&theme=tokyonight&no-frame=true&row=1&column=7" />
+  <img src="https://github-profile-trophy.vercel.app/?MuriloReisz&theme=tokyonight&no-frame=true&row=1&column=7" />
 </p>
 
 ---
 
 ## 📊 GITHUB STATS
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&rank_icon=github" />
+  <img src="https://github-readme-stats.vercel.app/api?MuriloReisz&show_icons=true&theme=tokyonight&rank_icon=github" />
 </p>
 
 <p align="center">
