@@ -6,7 +6,7 @@
      ══════════════════════════════════════════════════════════════════════ -->
 
 <a href="https://muriloreisz.com">
-  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/banner.svg" width="100%" alt="Murilo Reis — AI &amp; Automation Specialist, Data Analyst. Cork, Ireland." />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/main/assets/banner.svg" width="100%" alt="Murilo Reis — AI &amp; Automation Specialist, Data Analyst. Cork, Ireland." />
 </a>
 
 <p align="center">
