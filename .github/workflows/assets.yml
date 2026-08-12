@@ -46,7 +46,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
           OUT_DIR: dist
-        run: python3 .github/scripts/gen_cards.py
+        # Output is mirrored into the step summary because Actions log
+        # downloads are blocked from the machine this is maintained on, and a
+        # failing generator is otherwise undiagnosable.
+        run: |
+          set +e
+          python3 -u .github/scripts/gen_cards.py 2>&1 | tee /tmp/cards.log
+          code=${PIPESTATUS[0]}
+          {
+            echo '### gen_cards.py (exit '"$code"')'
+            echo '```'
+            cat /tmp/cards.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit "$code"
 
       - name: Carry the static banner across
         run: cp assets/banner.svg dist/banner.svg
