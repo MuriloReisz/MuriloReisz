@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Self-hosted hero banner.
+
+  Replaces capsule-render, which rendered as a blank box: it is a free Vercel
+  app and it rate-limits. Anything in this README that must not break has to
+  be served from this repo, and the contribution snake proved that an SVG with
+  CSS animation inside it renders fine through GitHub's image proxy.
+
+  Palette is muriloreisz.com's: #6d5ef0 primary, #a78bfa on dark, #0d0d10 bg.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-label="Murilo Reis — AI and Automation Specialist, Data Analyst">
+  <title>Murilo Reis — AI &amp; Automation Specialist · Data Analyst</title>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0d10"/>
+      <stop offset="55%" stop-color="#14121f"/>
+      <stop offset="100%" stop-color="#1b1533"/>
+    </linearGradient>
+
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6d5ef0" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#6d5ef0"/>
+      <stop offset="82%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#a78bfa" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+
+    <!-- Scanlines, the cheap trick that makes anything read as a terminal. -->
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#a78bfa" opacity="0.05"/>
+    </pattern>
+
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="280" rx="4"/></clipPath>
+
+    <style>
+      /* Held to transform and opacity only: those are the two properties that
+         animate cheaply, and this SVG can be on screen for as long as someone
+         reads the page. */
+      .sweep  { animation: sweep 7s cubic-bezier(.4,0,.6,1) infinite; }
+      .cursor { animation: blink 1.05s steps(1) infinite; }
+      .dot    { animation: drift 9s ease-in-out infinite; }
+      .dot:nth-of-type(even) { animation-duration: 12s; animation-direction: reverse; }
+      .pulse  { animation: pulse 3.4s ease-in-out infinite; }
+
+      @keyframes sweep  { 0% { transform: translateX(-420px); } 100% { transform: translateX(1200px); } }
+      @keyframes blink  { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      @keyframes drift  { 0%, 100% { transform: translateY(0); opacity: .5; } 50% { transform: translateY(-9px); opacity: 1; } }
+      @keyframes pulse  { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .sweep, .cursor, .dot, .pulse { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="280" fill="url(#bg)"/>
+    <rect width="1200" height="280" fill="url(#grid)"/>
+
+    <!-- A scatter of points: the cold open on the site is a point cloud, and
+         this is the cheapest possible nod back to it. -->
+    <g fill="#a78bfa">
+      <circle class="dot" cx="905"  cy="70"  r="1.6" opacity="0.6"/>
+      <circle class="dot" cx="948"  cy="120" r="2.1" opacity="0.5"/>
+      <circle class="dot" cx="982"  cy="58"  r="1.4" opacity="0.7"/>
+      <circle class="dot" cx="1012" cy="150" r="1.8" opacity="0.45"/>
+      <circle class="dot" cx="1048" cy="92"  r="2.3" opacity="0.6"/>
+      <circle class="dot" cx="1080" cy="188" r="1.5" opacity="0.5"/>
+      <circle class="dot" cx="1112" cy="126" r="2"   opacity="0.65"/>
+      <circle class="dot" cx="1145" cy="74"  r="1.7" opacity="0.5"/>
+      <circle class="dot" cx="866"  cy="176" r="1.5" opacity="0.4"/>
+      <circle class="dot" cx="1168" cy="214" r="1.9" opacity="0.45"/>
+      <circle class="dot" cx="922"  cy="228" r="1.6" opacity="0.4"/>
+      <circle class="dot" cx="1006" cy="238" r="1.4" opacity="0.35"/>
+    </g>
+
+    <!-- window chrome -->
+    <g font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace">
+      <rect x="0" y="0" width="1200" height="34" fill="#0a0a0c" fill-opacity="0.85"/>
+      <circle cx="20" cy="17" r="5" fill="#6d5ef0" opacity="0.85"/>
+      <circle cx="38" cy="17" r="5" fill="#4c3fb5" opacity="0.7"/>
+      <circle cx="56" cy="17" r="5" fill="#2a2440" opacity="0.9"/>
+      <text x="80" y="22" font-size="12.5" fill="#6c6c72" letter-spacing="1.2">murilo@cork: ~/portfolio — zsh</text>
+      <text x="1180" y="22" font-size="12.5" fill="#6c6c72" text-anchor="end" class="pulse">● live</text>
+    </g>
+
+    <g font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace">
+      <text x="56" y="106" font-size="14" fill="#6d5ef0" letter-spacing="2.4">$ whoami</text>
+
+      <text x="56" y="164" font-size="46" font-weight="700" fill="#f5f5f7" letter-spacing="-0.6">MURILO REIS</text>
+      <rect class="cursor" x="386" y="134" width="17" height="38" fill="#a78bfa"/>
+
+      <text x="58" y="204" font-size="16.5" font-weight="700" fill="#a78bfa" letter-spacing="3.4">AI &amp; AUTOMATION SPECIALIST · DATA ANALYST</text>
+      <text x="58" y="234" font-size="13.5" fill="#8a8a90" letter-spacing="0.6">Cork, Ireland — models, pipelines and automations that ship into real workflows</text>
+    </g>
+
+    <rect x="56" y="252" width="620" height="2" fill="url(#rule)"/>
+    <rect width="1200" height="280" fill="url(#scan)"/>
+
+    <!-- the scanning pass -->
+    <g class="sweep"><rect x="0" y="0" width="420" height="280" fill="url(#sweep)" opacity="0.22"/></g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1199" height="279" rx="4" fill="none" stroke="#6d5ef0" stroke-opacity="0.35"/>
+</svg>

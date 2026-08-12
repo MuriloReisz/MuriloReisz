@@ -5,7 +5,9 @@
      animation channel available; nothing below is CSS.
      ══════════════════════════════════════════════════════════════════════ -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d0d10,50:4c3fb5,100:6d5ef0&height=190&section=header&text=MURILO%20REIS&fontSize=52&fontColor=ffffff&fontAlign=50&fontAlignY=36&desc=AI%20%26%20AUTOMATION%20SPECIALIST%20%C2%B7%20DATA%20ANALYST&descSize=16&descAlign=50&descAlignY=58&animation=fadeIn" width="100%" alt="Murilo Reis — AI & Automation Specialist, Data Analyst" />
+<a href="https://muriloreisz.com">
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/banner.svg" width="100%" alt="Murilo Reis — AI &amp; Automation Specialist, Data Analyst. Cork, Ireland." />
+</a>
 
 <p align="center">
   <a href="https://muriloreisz.com">
@@ -148,20 +150,15 @@ Full write-ups — the problem, the approach, and what actually moved — live a
 ## `~/metrics`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=MuriloReisz&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d0d10&title_color=a78bfa&icon_color=6d5ef0&text_color=c9c9d1&ring_color=a78bfa" alt="GitHub stats" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MuriloReisz&layout=compact&hide_border=true&langs_count=8&bg_color=0d0d10&title_color=a78bfa&text_color=c9c9d1" alt="Most used languages" height="170" />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/stats.svg" alt="GitHub statistics" height="296" />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/langs.svg" alt="Most used languages" height="296" />
 </p>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=MuriloReisz&hide_border=true&background=0d0d10&stroke=6d5ef0&ring=a78bfa&fire=a78bfa&currStreakLabel=a78bfa&sideLabels=c9c9d1&currStreakNum=ffffff&sideNums=ffffff&dates=6c6c72" alt="Contribution streak" height="170" />
-</p>
-
+<!-- The activity graph is the one third-party widget kept: it rendered fine,
+     and reimplementing a year-long contribution chart is not worth it. If it
+     ever blanks, it goes the same way as the other four. -->
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=MuriloReisz&bg_color=0d0d10&color=a78bfa&line=6d5ef0&point=ffffff&area=true&area_color=4c3fb5&hide_border=true&custom_title=Contribution%20activity" alt="Contribution activity graph" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MuriloReisz&theme=algolia&no-frame=true&no-bg=true&margin-w=8&margin-h=8&column=7" alt="Trophies" />
 </p>
 
 ### `./snake --contributions`
@@ -196,4 +193,3 @@ murilo@cork:~$ tail -f now.log
   </a>
 </p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:6d5ef0,50:4c3fb5,100:0d0d10&height=110&section=footer" width="100%" alt="" />
