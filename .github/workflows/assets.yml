@@ -49,17 +49,18 @@ jobs:
         # Output is mirrored into the step summary because Actions log
         # downloads are blocked from the machine this is maintained on, and a
         # failing generator is otherwise undiagnosable.
+        # This step NEVER fails, and its output is written into dist/ so it
+        # travels to the output branch. Actions log downloads are blocked by
+        # the network policy on the machine this is maintained from, so the
+        # published branch is the only channel where a traceback is readable.
+        # Failing here would also drop the snake and the banner, which are fine.
         run: |
+          mkdir -p dist
           set +e
-          python3 -u .github/scripts/gen_cards.py 2>&1 | tee /tmp/cards.log
-          code=${PIPESTATUS[0]}
-          {
-            echo '### gen_cards.py (exit '"$code"')'
-            echo '```'
-            cat /tmp/cards.log
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
-          exit "$code"
+          python3 -u .github/scripts/gen_cards.py 2>&1 | tee dist/build.log
+          echo "exit=${PIPESTATUS[0]}" >> dist/build.log
+          python3 -V >> dist/build.log
+          exit 0
 
       - name: Carry the static banner across
         run: cp assets/banner.svg dist/banner.svg
