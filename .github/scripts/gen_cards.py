@@ -109,19 +109,33 @@ def collect() -> dict:
         except (urllib.error.URLError, KeyError, TypeError) as e:
             print(f"!! contributions unavailable ({e}); card will omit them")
 
-    # Every repo, including private ones the token can see, so the language mix
-    # reflects actual work rather than only what is public.
+    # Prefer /user/repos, which includes private repos, so the language mix
+    # reflects actual work rather than only what is public. But GITHUB_TOKEN in
+    # Actions is a repo-scoped installation token, NOT a user token, so that
+    # endpoint 403s there — which is what broke the first run of this workflow.
+    # Fall back to the public listing rather than failing the build; a slightly
+    # narrower language mix is a much better outcome than no cards at all.
+    def list_repos(path: str) -> list[dict]:
+        out: list[dict] = []
+        page = 1
+        while page <= 10:
+            batch = api(f"{path}{'&' if '?' in path else '?'}per_page=100&page={page}")
+            if not isinstance(batch, list) or not batch:
+                break
+            out.extend(batch)
+            if len(batch) < 100:
+                break
+            page += 1
+        return out
+
     repos: list[dict] = []
-    page = 1
-    while page <= 10:
-        batch = api(f"/user/repos?per_page=100&page={page}&affiliation=owner") if TOKEN \
-            else api(f"/users/{USER}/repos?per_page=100&page={page}")
-        if not batch:
-            break
-        repos.extend(batch)
-        if len(batch) < 100:
-            break
-        page += 1
+    if TOKEN:
+        try:
+            repos = list_repos("/user/repos?affiliation=owner")
+        except urllib.error.URLError as e:
+            print(f"!! /user/repos unavailable ({e}); using the public listing")
+    if not repos:
+        repos = list_repos(f"/users/{USER}/repos")
 
     stars = sum(r.get("stargazers_count", 0) for r in repos)
 
