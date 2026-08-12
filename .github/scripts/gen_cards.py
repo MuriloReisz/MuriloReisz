@@ -266,9 +266,15 @@ def main() -> int:
         d = collect()
         (OUT / "stats.svg").write_text(stats_card(d))
         (OUT / "langs.svg").write_text(langs_card(d))
+        # Computed OUT of the f-string on purpose. A lambda inside an f-string
+        # replacement field is a SyntaxError before Python 3.12 — the colon in
+        # "key=lambda k: ..." is parsed as the format-spec separator — and the
+        # runner is not guaranteed to be 3.12. That single line failed this
+        # workflow at import time, silently, for four consecutive builds.
+        top_langs = sorted(d["langs"], key=lambda k: -d["langs"][k])[:6]
         log.append(f"OK  repos={len(d['repos'])} stars={d['stars']}")
         log.append(f"OK  contribs={d['contribs']}")
-        log.append(f"OK  langs={sorted(d['langs'], key=lambda k: -d['langs'][k])[:6]}")
+        log.append(f"OK  langs={top_langs}")
         code = 0
     except Exception:
         import traceback
