@@ -238,15 +238,53 @@ def langs_card(d: dict) -> str:
     return "\n".join(parts)
 
 
-def main() -> None:
-    d = collect()
+def placeholder(title: str, note: str) -> str:
+    """A card that says so, for when the API could not be reached.
+
+    Deliberately NOT a blank or a failed build: a blank box is exactly the
+    failure mode this whole script exists to remove, and taking the build down
+    would also drop the snake and the banner, which have nothing wrong with
+    them.
+    """
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="480" height="126" '
+        f'viewBox="0 0 480 126" role="img" aria-label="{esc(title)} unavailable">'
+        f"<title>{esc(title)} temporarily unavailable</title>"
+        f'<rect width="480" height="126" rx="4" fill="{BG}" stroke="{LINE}"/>'
+        f'<text x="24" y="40" font-family="{MONO}" font-size="12" fill="{ACCENT2}" letter-spacing="2">$ {esc(title.lower())}</text>'
+        f'<text x="24" y="72" font-family="{MONO}" font-size="14" font-weight="700" fill="{ACCENT}">TEMPORARILY UNAVAILABLE</text>'
+        f'<text x="24" y="98" font-family="{MONO}" font-size="11.5" fill="{MUTED}">{esc(note)}</text>'
+        "</svg>"
+    )
+
+
+def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "stats.svg").write_text(stats_card(d))
-    (OUT / "langs.svg").write_text(langs_card(d))
-    print(f"wrote {OUT}/stats.svg and {OUT}/langs.svg")
-    print(f"  repos={len(d['repos'])} stars={d['stars']} contribs={d['contribs']}")
-    print(f"  langs={sorted(d['langs'], key=lambda k: -d['langs'][k])[:6]}")
+    log: list[str] = []
+
+    try:
+        d = collect()
+        (OUT / "stats.svg").write_text(stats_card(d))
+        (OUT / "langs.svg").write_text(langs_card(d))
+        log.append(f"OK  repos={len(d['repos'])} stars={d['stars']}")
+        log.append(f"OK  contribs={d['contribs']}")
+        log.append(f"OK  langs={sorted(d['langs'], key=lambda k: -d['langs'][k])[:6]}")
+        code = 0
+    except Exception:
+        import traceback
+
+        tb = traceback.format_exc()
+        log.append("FAILED — publishing placeholder cards instead")
+        log.append(tb)
+        (OUT / "stats.svg").write_text(placeholder("statistics", "the GitHub API did not answer on the last build"))
+        (OUT / "langs.svg").write_text(placeholder("languages", "the GitHub API did not answer on the last build"))
+        code = 0  # never take the build down; the snake and banner are fine
+
+    text = "\n".join(log)
+    (OUT / "build.log").write_text(text + "\n")
+    print(text)
+    return code
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
