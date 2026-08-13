@@ -139,15 +139,32 @@ def collect() -> dict:
 
     stars = sum(r.get("stargazers_count", 0) for r in repos)
 
-    langs: dict[str, int] = {}
+    # Language mix, per repo, from /languages rather than the list response's
+    # single `language` field. Two reasons that field is not good enough: it is
+    # frequently null in list responses (six of these repos report null while
+    # plainly containing Java), and it only ever names ONE language per repo.
+    #
+    # Each repo is then normalised to contribute 1.0 in total, so the mix
+    # answers "what does he work in" rather than "which repo has the most
+    # bytes". Weighting raw bytes let a single notebook repo take 69% of the
+    # card, because .ipynb files carry their own base64 output images inline.
+    langs: dict[str, float] = {}
     for r in repos:
         if r.get("fork"):
             continue
-        name = r.get("language")
-        if not name or name in SKIP_LANGS:
+        try:
+            per_repo = api(f"/repos/{r['full_name']}/languages")
+        except urllib.error.URLError as e:
+            print(f"!! languages for {r.get('full_name')} unavailable ({e})")
             continue
-        # Weight by repo size: one throwaway file should not outrank a project.
-        langs[name] = langs.get(name, 0) + max(1, r.get("size", 1))
+        if not isinstance(per_repo, dict):
+            continue
+        usable = {k: v for k, v in per_repo.items() if k not in SKIP_LANGS and v > 0}
+        total_bytes = sum(usable.values())
+        if not total_bytes:
+            continue
+        for name, byts in usable.items():
+            langs[name] = langs.get(name, 0.0) + byts / total_bytes
 
     return {
         "user": user,
