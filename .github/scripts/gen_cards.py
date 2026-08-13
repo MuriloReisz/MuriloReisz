@@ -40,6 +40,14 @@ MONO = "ui-monospace, 'JetBrains Mono', Menlo, monospace"
 # Languages GitHub reports that say nothing about what someone can do.
 SKIP_LANGS = {"HTML", "CSS", "SCSS", "Dockerfile", "Makefile", "Batchfile", "Shell"}
 
+# Linguist labels a .ipynb by its container, not its contents, so every line of
+# Python in a notebook is reported as "Jupyter Notebook". Left alone that read
+# 66.7% Jupyter / 4.1% Python, which describes the file format rather than the
+# skill. Merging is the accurate call, not the flattering one: the code in those
+# notebooks is Python. Excluding Jupyter instead would have been worse on both
+# counts — Python would have fallen to ~12%, behind TypeScript.
+MERGE_LANGS = {"Jupyter Notebook": "Python"}
+
 
 def api(path: str) -> object:
     req = urllib.request.Request(
@@ -164,6 +172,7 @@ def collect() -> dict:
         if not total_bytes:
             continue
         for name, byts in usable.items():
+            name = MERGE_LANGS.get(name, name)
             langs[name] = langs.get(name, 0.0) + byts / total_bytes
 
     return {
@@ -224,7 +233,12 @@ def stats_card(d: dict) -> str:
 
 def langs_card(d: dict) -> str:
     langs = d["langs"]
-    top = sorted(langs.items(), key=lambda kv: -kv[1])[:6]
+    # Drop anything that would round to 0.0%: a bar labelled "0.0%" reads as a
+    # rendering fault rather than as a small number.
+    ranked = sorted(langs.items(), key=lambda kv: -kv[1])
+    grand = sum(v for _, v in ranked) or 1
+    ranked = [(k, v) for k, v in ranked if v / grand >= 0.005]
+    top = ranked[:6]
     total = sum(v for _, v in top) or 1
     ramp = ["#a78bfa", "#8b7cf5", "#6d5ef0", "#5b4fd6", "#4c3fb5", "#3b3191"]
 
