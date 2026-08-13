@@ -29,16 +29,13 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # Snake first: it creates dist/, and the cards are added alongside.
-      - name: Render the contribution snake
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          # Violet ramp matching muriloreisz.com.
-          outputs: |
-            dist/snake-dark.svg?palette=github-dark&color_snake=%23a78bfa&color_dots=%23161b22,%234c3fb5,%236d5ef0,%238b7cf5,%23c4b5fd
-            dist/snake.svg?color_snake=%23a78bfa&color_dots=%23ede9fe,%23c4b5fd,%238b7cf5,%236d5ef0,%234c3fb5
-
+      # ORDER MATTERS. Platane/snk is a Docker action running as root, so if
+      # it goes first it creates dist/ owned by root and every later step
+      # gets EACCES writing into it — which is exactly what happened: the
+      # card step reported success (it swallows its own exit code so a bad
+      # build cannot drop the snake) while silently writing nothing at all.
+      # Creating dist/ as the runner user first fixes it; root can still
+      # write into a user-owned directory.
       - name: Render the stats and language cards
         env:
           # Needs read:user for the contributions graph; the default token has
@@ -61,6 +58,28 @@ jobs:
           echo "exit=${PIPESTATUS[0]}" >> dist/build.log
           python3 -V >> dist/build.log
           exit 0
+
+      - name: Render the contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # Violet ramp matching muriloreisz.com.
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark&color_snake=%23a78bfa&color_dots=%23161b22,%234c3fb5,%236d5ef0,%238b7cf5,%23c4b5fd
+            dist/snake.svg?color_snake=%23a78bfa&color_dots=%23ede9fe,%23c4b5fd,%238b7cf5,%236d5ef0,%234c3fb5
+
+      - name: Make sure the runner still owns what it is about to publish
+        run: sudo chown -R "$(id -u):$(id -g)" dist
+
+      # The card step deliberately swallows its own exit code, so this is
+      # what stops a silent no-write from passing as a green build again.
+      - name: Verify every asset exists before publishing
+        run: |
+          ls -l dist
+          for f in stats.svg langs.svg snake-dark.svg snake.svg; do
+            test -s "dist/$f" || { echo "::error::dist/$f missing or empty"; exit 1; }
+          done
+          echo "all four assets present"
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4
