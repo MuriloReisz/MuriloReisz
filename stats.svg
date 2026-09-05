@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="296" viewBox="0 0 480 296" role="img" aria-label="GitHub statistics for MuriloReisz">
+<title>GitHub statistics for MuriloReisz</title>
+<defs><style>.r{animation:in .5s ease-out backwards}@keyframes in{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){.r{animation:none}}</style></defs>
+<rect width="480" height="296" rx="4" fill="#0d0d10" stroke="rgba(167,139,250,0.30)"/>
+<text x="24" y="34" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#6d5ef0" letter-spacing="2">$ gh api /users/MuriloReisz</text>
+<text x="24" y="62" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="16" font-weight="700" fill="#a78bfa" letter-spacing="1">STATISTICS</text>
+<rect x="24" y="74" width="432" height="1" fill="rgba(167,139,250,0.30)"/>
+<g class="r" style="animation-delay:0ms">
+<text x="24" y="104" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90">Contributions (1y)</text>
+<text x="300" y="104" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90" opacity="0.35">......................</text>
+<text x="456" y="104" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="15" font-weight="700" fill="#f5f5f7" text-anchor="end">65</text>
+</g>
+<g class="r" style="animation-delay:90ms">
+<text x="24" y="138" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90">Commits (1y)</text>
+<text x="300" y="138" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90" opacity="0.35">......................</text>
+<text x="456" y="138" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="15" font-weight="700" fill="#f5f5f7" text-anchor="end">63</text>
+</g>
+<g class="r" style="animation-delay:180ms">
+<text x="24" y="172" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90">Pull requests</text>
+<text x="300" y="172" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90" opacity="0.35">......................</text>
+<text x="456" y="172" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="15" font-weight="700" fill="#f5f5f7" text-anchor="end">0</text>
+</g>
+<g class="r" style="animation-delay:270ms">
+<text x="24" y="206" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90">Public repos</text>
+<text x="300" y="206" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90" opacity="0.35">......................</text>
+<text x="456" y="206" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="15" font-weight="700" fill="#f5f5f7" text-anchor="end">11</text>
+</g>
+<g class="r" style="animation-delay:360ms">
+<text x="24" y="240" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90">Total repos</text>
+<text x="300" y="240" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90" opacity="0.35">......................</text>
+<text x="456" y="240" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="15" font-weight="700" fill="#f5f5f7" text-anchor="end">11</text>
+</g>
+<g class="r" style="animation-delay:450ms">
+<text x="24" y="274" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90">Stars earned</text>
+<text x="300" y="274" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#8a8a90" opacity="0.35">......................</text>
+<text x="456" y="274" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="15" font-weight="700" fill="#f5f5f7" text-anchor="end">0</text>
+</g>
+</svg>
