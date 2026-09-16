@@ -6,12 +6,12 @@
      ══════════════════════════════════════════════════════════════════════ -->
 
 <a href="https://muriloreisz.com">
-  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/main/assets/banner.svg" width="100%" alt="Murilo Reis — AI &amp; Automation Specialist, Data Analyst. Cork, Ireland." />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/main/assets/banner.svg" width="100%" alt="Murilo Reis — Data &amp; AI Specialist. Cork, Ireland." />
 </a>
 
 <p align="center">
   <a href="https://muriloreisz.com">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1100&color=A78BFA&center=true&vCenter=true&width=760&height=90&lines=%24+whoami;%3E+AI+%26+automation+specialist+%C2%B7+data+analyst;%3E+ships+models+into+real+workflows%2C+not+notebooks;%3E+python+%C2%B7+sql+%C2%B7+ml+%C2%B7+pipelines+%C2%B7+rpa;%24+cat+%2Fetc%2Fmotd;%3E+%22if+it+cannot+be+re-run%2C+it+is+not+finished%22" alt="Terminal: AI & automation specialist, data analyst" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&pause=1100&color=A78BFA&center=true&vCenter=true&width=760&height=90&lines=%24+whoami;%3E+data+%26+ai+specialist+%C2%B7+automation;%3E+ships+models+into+real+workflows%2C+not+notebooks;%3E+python+%C2%B7+sql+%C2%B7+ml+%C2%B7+pipelines+%C2%B7+rpa;%24+cat+%2Fetc%2Fmotd;%3E+%22if+it+cannot+be+re-run%2C+it+is+not+finished%22" alt="Terminal: data & AI specialist, automation" />
   </a>
 </p>
 
@@ -38,9 +38,9 @@
 ```console
 murilo@cork:~$ cat profile.json
 {
-  "role":     "AI & Automation Specialist · Data Analyst",
+  "role":     "Data & AI Specialist · Automation",
   "based":    "Cork, Ireland",
-  "day_job":  "Apple — CEMEA Sales BPR & Systems",
+  "day_job":  "Apple (contract) — CEMEA Sales BPR & Systems",
   "freelance": "data & automation builds, open for work",
   "languages": ["pt-BR", "en", "es", "it", "fr"],
   "focus":    ["ml in production", "automation", "analytics engineering"]

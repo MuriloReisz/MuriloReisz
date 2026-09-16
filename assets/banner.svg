@@ -10,7 +10,7 @@
   Palette is muriloreisz.com's: #6d5ef0 primary, #a78bfa on dark, #0d0d10 bg.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-label="Murilo Reis — AI and Automation Specialist, Data Analyst">
-  <title>Murilo Reis — AI &amp; Automation Specialist · Data Analyst</title>
+  <title>Murilo Reis — Data &amp; AI Specialist · Automation</title>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -101,7 +101,7 @@
       <text x="56" y="164" font-size="46" font-weight="700" fill="#f5f5f7" letter-spacing="-0.6">MURILO REIS</text>
       <rect class="cursor" x="386" y="134" width="17" height="38" fill="#a78bfa"/>
 
-      <text x="58" y="204" font-size="16.5" font-weight="700" fill="#a78bfa" letter-spacing="3.4">AI &amp; AUTOMATION SPECIALIST · DATA ANALYST</text>
+      <text x="58" y="204" font-size="16.5" font-weight="700" fill="#a78bfa" letter-spacing="3.4">DATA &amp; AI SPECIALIST · AUTOMATION</text>
       <text x="58" y="234" font-size="13.5" fill="#8a8a90" letter-spacing="0.6">Cork, Ireland — models, pipelines and automations that ship into real workflows</text>
     </g>
 
