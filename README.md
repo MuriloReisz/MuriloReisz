@@ -18,7 +18,7 @@
 <!-- ── everything links back to one place ── -->
 <p align="center">
   <a href="https://muriloreisz.com"><img src="https://img.shields.io/badge/%E2%97%86_PORTFOLIO-muriloreisz.com-6d5ef0?style=for-the-badge&labelColor=0d0d10" alt="Portfolio" /></a>
-  <a href="https://muriloreisz.com/work"><img src="https://img.shields.io/badge/CASE_STUDIES-9_written_up-a78bfa?style=for-the-badge&labelColor=0d0d10" alt="Case studies" /></a>
+  <a href="https://muriloreisz.com/work"><img src="https://img.shields.io/badge/CASE_STUDIES-11_written_up-a78bfa?style=for-the-badge&labelColor=0d0d10" alt="Case studies" /></a>
   <a href="https://muriloreisz.com/ai-services"><img src="https://img.shields.io/badge/AI_SERVICES-hire_me-1d1d1f?style=for-the-badge&labelColor=0d0d10" alt="AI services" /></a>
   <a href="https://muriloreisz.com/playground"><img src="https://img.shields.io/badge/PLAYGROUND-live_demos-1d1d1f?style=for-the-badge&labelColor=0d0d10" alt="Playground" /></a>
 </p>
@@ -112,37 +112,45 @@ murilo@cork:~$ ./what_i_actually_do --verbose
 
 Full write-ups — the problem, the approach, and what actually moved — live at **[muriloreisz.com/work](https://muriloreisz.com/work)**.
 
-<table>
-<tr><th align="left">▚ REPO</th><th align="left">WHAT IT IS</th><th align="left">STACK</th></tr>
+<!-- Generated nightly from the GitHub API by .github/scripts/gen_cards.py.
+     This replaced a hand-written three-row table that had drifted: it still
+     listed three repos long after there were more, and nothing kept it honest. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/showcase.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/showcase-light.svg" />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/showcase.svg" alt="Selected repositories" width="100%" />
+</picture>
 
-<tr>
-<td><a href="https://github.com/MuriloReisz/MuriloReisz.github.io"><b>MuriloReisz.github.io</b></a></td>
-<td>This portfolio. Astro, zero UI framework, with a procedural <b>~730k-point WebGL cold open</b> generated at runtime instead of downloaded as a mesh — a hooded figure made of code at a desk, and you fly through his monitor into the page.</td>
-<td><code>TypeScript</code> <code>Astro</code> <code>Three.js</code></td>
-</tr>
+**[MuriloReisz.github.io](https://github.com/MuriloReisz/MuriloReisz.github.io)** is the one to look at first: the portfolio itself, Astro with zero UI framework, carrying a procedural **~730k-point WebGL cold open** generated at runtime rather than downloaded as a mesh — a hooded figure made of code at a desk, and you fly through his monitor into the page.
 
-<tr>
-<td><a href="https://github.com/MuriloReisz/Ocean-Drones"><b>Ocean-Drones</b></a></td>
-<td>Autonomous marine data platform: real-time ingestion, species classification on captured imagery, predictive models over the sensor series.</td>
-<td><code>Python</code> <code>ML</code> <code>Jupyter</code></td>
-</tr>
+### Case studies
 
-<tr>
-<td><a href="https://github.com/MuriloReisz/CotCo"><b>CotCo</b></a></td>
-<td>Data solution design and documentation for an industry challenge brief.</td>
-<td><code>Python</code> <code>Jupyter</code></td>
-</tr>
-</table>
+<!-- Generated from muriloreisz.com/work.json, which is derived from the same
+     data the site renders. The count used to be typed by hand here and drifted
+     to "9" while the site defined 11. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/casestudies.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/casestudies-light.svg" />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/casestudies.svg" alt="Case studies" width="100%" />
+</picture>
 
-**Client engagements** — forecasting, churn scoring, close automation, NLP triage — are written up as case studies on the site. That code lives in private client repos, so it is not here:
+**Delivered work** — the engagements behind the numbers:
 
 <p>
-  <a href="https://muriloreisz.com/work/clinic-nlp-triage"><img src="https://img.shields.io/badge/NLP-clinic_triage_%C2%B7_96.2%25_routing-a78bfa?style=flat-square&labelColor=0d0d10" alt="NLP triage case study" /></a>
-  <a href="https://muriloreisz.com/work/churn-early-warning"><img src="https://img.shields.io/badge/ML-churn_scoring_%C2%B7_0.81_AUC-a78bfa?style=flat-square&labelColor=0d0d10" alt="Churn scoring case study" /></a>
-  <a href="https://muriloreisz.com/work/finance-close-automation"><img src="https://img.shields.io/badge/AUTOMATION-close_9d_%E2%86%92_3d-a78bfa?style=flat-square&labelColor=0d0d10" alt="Close automation case study" /></a>
-  <a href="https://muriloreisz.com/work/retail-demand-forecast"><img src="https://img.shields.io/badge/FORECASTING-retail_demand-6d5ef0?style=flat-square&labelColor=0d0d10" alt="Demand forecasting case study" /></a>
-  <a href="https://muriloreisz.com/work/energy-anomaly-detection"><img src="https://img.shields.io/badge/ANOMALY-energy_detection-6d5ef0?style=flat-square&labelColor=0d0d10" alt="Anomaly detection case study" /></a>
-  <a href="https://muriloreisz.com/work"><img src="https://img.shields.io/badge/+4_more-see_all-1d1d1f?style=flat-square&labelColor=0d0d10" alt="All case studies" /></a>
+  <a href="https://muriloreisz.com/work/cemea-sales-dashboard"><img src="https://img.shields.io/badge/BI-CEMEA_sales_performance_%C2%B7_Apple-a78bfa?style=flat-square&labelColor=0d0d10" alt="CEMEA sales dashboard case study" /></a>
+  <a href="https://muriloreisz.com/work/freelance-automation-bi"><img src="https://img.shields.io/badge/AUTOMATION-freelance_automation_%26_BI-a78bfa?style=flat-square&labelColor=0d0d10" alt="Freelance automation and BI case study" /></a>
+  <a href="https://muriloreisz.com/work/ocean-drones"><img src="https://img.shields.io/badge/ML-ocean_drones_platform-a78bfa?style=flat-square&labelColor=0d0d10" alt="Ocean Drones case study" /></a>
+</p>
+
+**Worked examples** — anonymised composite scenarios rather than named client engagements, written up to show the approach and the reasoning. The figures are illustrative, and the site labels each one as such:
+
+<p>
+  <a href="https://muriloreisz.com/work/clinic-nlp-triage"><img src="https://img.shields.io/badge/NLP-clinic_triage_%C2%B7_96.2%25_%C2%B7_illustrative-6d5ef0?style=flat-square&labelColor=0d0d10" alt="Clinic NLP triage worked example" /></a>
+  <a href="https://muriloreisz.com/work/churn-early-warning"><img src="https://img.shields.io/badge/ML-churn_scoring_%C2%B7_0.81_AUC_%C2%B7_illustrative-6d5ef0?style=flat-square&labelColor=0d0d10" alt="Churn scoring worked example" /></a>
+  <a href="https://muriloreisz.com/work/finance-close-automation"><img src="https://img.shields.io/badge/AUTOMATION-close_9d_%E2%86%92_3d_%C2%B7_illustrative-6d5ef0?style=flat-square&labelColor=0d0d10" alt="Close automation worked example" /></a>
+  <a href="https://muriloreisz.com/work/retail-demand-forecast"><img src="https://img.shields.io/badge/FORECASTING-retail_demand_%C2%B7_illustrative-1d1d1f?style=flat-square&labelColor=0d0d10" alt="Demand forecasting worked example" /></a>
+  <a href="https://muriloreisz.com/work/energy-anomaly-detection"><img src="https://img.shields.io/badge/ANOMALY-energy_detection_%C2%B7_illustrative-1d1d1f?style=flat-square&labelColor=0d0d10" alt="Anomaly detection worked example" /></a>
+  <a href="https://muriloreisz.com/work"><img src="https://img.shields.io/badge/see_all-muriloreisz.com%2Fwork-1d1d1f?style=flat-square&labelColor=0d0d10" alt="All case studies" /></a>
 </p>
 
 ---
@@ -150,9 +158,26 @@ Full write-ups — the problem, the approach, and what actually moved — live a
 ## `~/metrics`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/stats.svg" alt="GitHub statistics" height="296" />
-  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/langs.svg" alt="Most used languages" height="296" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/stats.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/stats-light.svg" />
+    <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/stats.svg" alt="GitHub statistics" height="296" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/langs.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/langs-light.svg" />
+    <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/langs.svg" alt="Most used languages" height="296" />
+  </picture>
 </p>
+
+<!-- Self-hosted replacement for github-profile-trophy, which rate-limited into
+     a blank box like the other three widgets. Every tier here is derived from a
+     real number in gen_cards.py rather than from an opaque external ranking. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/trophies.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/trophies-light.svg" />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/trophies.svg" alt="Achievements" width="100%" />
+</picture>
 
 <!-- The activity graph is the one third-party widget kept: it rendered fine,
      and reimplementing a year-long contribution chart is not worth it. If it

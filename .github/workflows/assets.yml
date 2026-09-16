@@ -73,13 +73,29 @@ jobs:
 
       # The card step deliberately swallows its own exit code, so this is
       # what stops a silent no-write from passing as a green build again.
+      # Every card is listed explicitly, in both themes: gen_cards.py writes a
+      # placeholder rather than skipping a file, so a name missing from this
+      # list is a card that could vanish from the README unnoticed.
       - name: Verify every asset exists before publishing
         run: |
           ls -l dist
-          for f in stats.svg langs.svg snake-dark.svg snake.svg; do
+          for f in \
+            stats.svg stats-light.svg \
+            langs.svg langs-light.svg \
+            showcase.svg showcase-light.svg \
+            trophies.svg trophies-light.svg \
+            casestudies.svg casestudies-light.svg \
+            snake-dark.svg snake.svg; do
             test -s "dist/$f" || { echo "::error::dist/$f missing or empty"; exit 1; }
           done
-          echo "all four assets present"
+          echo "all twelve assets present"
+          # A placeholder IS a valid build — the script degrades rather than
+          # failing — but it should surface in the run instead of being
+          # discovered on the live profile.
+          if grep -q '^!!' dist/build.log; then
+            echo "::warning::some cards published as placeholders:"
+            grep '^!!' dist/build.log
+          fi
 
       - name: Publish to the output branch
         uses: crazy-max/ghaction-github-pages@v4
