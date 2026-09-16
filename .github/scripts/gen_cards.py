@@ -219,9 +219,18 @@ def collect() -> dict:
         return out
 
     repos: list[dict] = []
+    # Whether the token can actually see this user's account, as opposed to just
+    # this one repo. It decides more than the repo list: `contributionsCollection`
+    # silently returns only the contributions VISIBLE TO THE TOKEN, so a
+    # repo-scoped token reports a small, wrong number rather than an error.
+    # In Actions that read 66 contributions / 0 PRs against real totals of
+    # 166 / 11 — published for weeks as fact. Understating is still inaccurate,
+    # so the cards now omit those figures rather than print the wrong ones.
+    user_scoped = False
     if TOKEN:
         try:
             repos = list_repos("/user/repos?affiliation=owner")
+            user_scoped = bool(repos)
         except urllib.error.URLError as e:
             print(f"!! /user/repos unavailable ({e}); using the public listing")
     if not repos:
@@ -262,7 +271,8 @@ def collect() -> dict:
         "repos": repos,
         "stars": stars,
         "langs": langs,
-        "contribs": contribs,
+        "contribs": contribs if user_scoped else None,
+        "user_scoped": user_scoped,
     }
 
 
@@ -413,9 +423,6 @@ def trophies_card(d: dict, t: dict) -> str:
     here is derived from a real number rather than from an opaque ranking.
     """
     u, c = d["user"], d["contribs"]
-    year = (c or {}).get("year", 0)
-    commits = (c or {}).get("commits", 0)
-    prs = (c or {}).get("prs", 0)
     langs = len([k for k, v in d["langs"].items() if v >= 0.05])
     repos = max(len(d["repos"]), u["public_repos"])
 
@@ -426,25 +433,41 @@ def trophies_card(d: dict, t: dict) -> str:
             return "SILVER"
         if value >= bronze:
             return "BRONZE"
-        return "—"
+        return ""
 
-    # Metrics chosen so every tile carries a real, non-zero number. An earlier
-    # version showed "STARS 0 —": a tile whose value is zero and whose rank is a
-    # dash reads as a broken widget rather than as a modest number, which is the
-    # exact failure this card replaced. Stars are still on the stats card, where
-    # a zero sits in context instead of in a trophy.
-    items = [
-        ("COMMITS", f"{commits:,}", tier(commits, 100, 400, 1000), "1y"),
-        ("ACTIVITY", f"{year:,}", tier(year, 150, 600, 1500), "contributions"),
-        ("REVIEWS", f"{prs:,}", tier(prs, 5, 25, 100), "pull requests"),
-        ("POLYGLOT", f"{langs}", tier(langs, 3, 5, 7), "languages"),
-        ("BUILDER", f"{repos}", tier(repos, 5, 15, 30), "repositories"),
+    # Only tiles whose number is both available and meaningful. Two rules,
+    # both learned from publishing the opposite:
+    #
+    #   - contribution tiles appear only when the token can actually see the
+    #     account (see `user_scoped` in collect()); otherwise they would show a
+    #     figure roughly a third of the truth,
+    #   - a tile whose value is 0 is dropped entirely. "STARS 0 —" reads as a
+    #     broken widget rather than as a modest number, which is exactly the
+    #     failure this card was built to replace.
+    candidates = [
+        ("POLYGLOT", langs, tier(langs, 3, 5, 7), "languages"),
+        ("BUILDER", repos, tier(repos, 5, 15, 30), "repositories"),
+        ("STARS", d["stars"], tier(d["stars"], 1, 10, 50), "earned"),
     ]
+    if c:
+        candidates = [
+            ("COMMITS", c["commits"], tier(c["commits"], 100, 400, 1000), "1y"),
+            ("ACTIVITY", c["year"], tier(c["year"], 150, 600, 1500), "contributions"),
+            ("REVIEWS", c["prs"], tier(c["prs"], 5, 25, 100), "pull requests"),
+        ] + candidates
+
+    items = [
+        (label, f"{value:,}", rank, unit)
+        for label, value, rank, unit in candidates
+        if value > 0
+    ][:5]
+    if not items:
+        raise RuntimeError("no non-zero achievement available")
     tier_fill = {
         "GOLD": "#f2c811",
         "SILVER": "#c8c8d0",
         "BRONZE": "#c8874a",
-        "—": t["muted"],
+        "": t["muted"],
     }
 
     w, h = 980, 168
