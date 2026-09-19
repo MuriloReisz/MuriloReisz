@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="238" viewBox="0 0 980 238" role="img" aria-label="Selected repositories">
+<title>Selected repositories</title>
+<defs><style>.sr{animation:fade .5s ease-out backwards}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){.sr{animation:none}}</style></defs>
+<rect width="980" height="238" rx="4" fill="#0d0d10" stroke="rgba(167,139,250,0.30)"/>
+<text x="24" y="34" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#6d5ef0" letter-spacing="2">$ gh repo list --sort stars</text>
+<text x="24" y="62" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="16" font-weight="700" fill="#a78bfa" letter-spacing="1">SELECTED REPOSITORIES</text>
+<rect x="24" y="74" width="932" height="1" fill="rgba(167,139,250,0.30)"/>
+<g class="sr" style="animation-delay:0ms">
+<text x="24" y="104" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13.5" font-weight="700" fill="#a78bfa">MuriloReisz.github.io</text>
+<text x="24" y="122" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11.5" fill="#8a8a90">My portfolio and case studies — Astro with no UI framework, plus a…</text>
+<text x="956" y="104" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11.5" fill="#8a8a90" text-anchor="end">TypeScript  ★ 0</text>
+<rect x="24" y="132" width="932" height="1" fill="rgba(167,139,250,0.30)" opacity="0.5"/>
+</g>
+<g class="sr" style="animation-delay:80ms">
+<text x="24" y="150" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13.5" font-weight="700" fill="#a78bfa">Ocean-Drones</text>
+<text x="24" y="168" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11.5" fill="#8a8a90">Ocean Drones — monitoring ocean waste and classifying mangrove species…</text>
+<text x="956" y="150" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11.5" fill="#8a8a90" text-anchor="end">Jupyter Notebook  ★ 0</text>
+<rect x="24" y="178" width="932" height="1" fill="rgba(167,139,250,0.30)" opacity="0.5"/>
+</g>
+<g class="sr" style="animation-delay:160ms">
+<text x="24" y="196" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13.5" font-weight="700" fill="#a78bfa">CotCo</text>
+<text x="24" y="214" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11.5" fill="#8a8a90">COT&amp;CO — IoT and AI solution design for a B2B industry brief. FIAP…</text>
+<text x="956" y="196" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="11.5" fill="#8a8a90" text-anchor="end">Jupyter Notebook  ★ 0</text>
+<rect x="24" y="224" width="932" height="1" fill="rgba(167,139,250,0.30)" opacity="0.5"/>
+</g>
+</svg>
