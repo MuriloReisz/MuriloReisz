@@ -85,10 +85,11 @@ jobs:
             showcase.svg showcase-light.svg \
             trophies.svg trophies-light.svg \
             casestudies.svg casestudies-light.svg \
+            activity.svg activity-light.svg \
             snake-dark.svg snake.svg; do
             test -s "dist/$f" || { echo "::error::dist/$f missing or empty"; exit 1; }
           done
-          echo "all twelve assets present"
+          echo "all fourteen assets present"
           # A placeholder IS a valid build — the script degrades rather than
           # failing — but it should surface in the run instead of being
           # discovered on the live profile.

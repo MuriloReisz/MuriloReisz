@@ -221,12 +221,12 @@ Full write-ups — the problem, the approach, and what actually moved — live a
   <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/trophies.svg" alt="Achievements" width="100%" />
 </picture>
 
-<!-- The activity graph is the one third-party widget kept: it rendered fine,
-     and reimplementing a year-long contribution chart is not worth it. If it
-     ever blanks, it goes the same way as the other four. -->
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MuriloReisz&bg_color=000000&color=2997ff&line=0066cc&point=ffffff&area=true&area_color=004c99&hide_border=true&custom_title=Contribution%20activity" alt="Contribution activity graph" width="100%" />
-</p>
+<!-- Self-hosted since the third-party activity graph went blank too. -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/activity.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/activity-light.svg" />
+  <img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/output/activity.svg" alt="Contribution activity, last 26 weeks" width="100%" />
+</picture>
 
 ### `./snake --contributions`
 

@@ -185,12 +185,21 @@ def collect() -> dict:
                   totalCommitContributions
                   totalPullRequestContributions
                   totalIssueContributions
-                  contributionCalendar { totalContributions }
+                  contributionCalendar {
+                    totalContributions
+                    weeks { contributionDays { contributionCount date } }
+                  }
                 }
               }
             }"""
             cc = graphql(q, {"login": USER})["data"]["user"]["contributionsCollection"]
+            weekly = [
+                (w["contributionDays"][0]["date"], sum(x["contributionCount"] for x in w["contributionDays"]))
+                for w in cc["contributionCalendar"]["weeks"]
+                if w["contributionDays"]
+            ]
             contribs = {
+                "weekly": weekly,
                 "year": cc["contributionCalendar"]["totalContributions"],
                 "commits": cc["totalCommitContributions"],
                 "prs": cc["totalPullRequestContributions"],
@@ -272,6 +281,10 @@ def collect() -> dict:
         "stars": stars,
         "langs": langs,
         "contribs": contribs if user_scoped else None,
+        # The weekly SHAPE is safe to publish even from a repo-scoped token: it
+        # is labelled "public activity" and prints no total, so it cannot
+        # understate anything the way the old tiles did.
+        "weekly": (contribs or {}).get("weekly", []),
         "user_scoped": user_scoped,
     }
 
@@ -470,14 +483,16 @@ def trophies_card(d: dict, t: dict) -> str:
         "": t["muted"],
     }
 
-    w, h = 980, 168
+    w, h = 980, 184
     gap = 12
     tile_w = (w - 48 - gap * (len(items) - 1)) // len(items)
     parts = frame(t, w, h, "$ ./achievements --all", "ACHIEVEMENTS", "Achievements")
     parts.insert(
         2,
         "<defs><style>"
-        ".tp{animation:pop .5s cubic-bezier(.22,1,.36,1) backwards}"
+        # No entrance fade: static renderers (mobile app, link previews)
+        # capture frame 0, and a hidden-start tile reads as a missing one.
+        ".tp{}"
         "@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}"
         "@media (prefers-reduced-motion:reduce){.tp{animation:none}}"
         "</style></defs>",
@@ -486,14 +501,58 @@ def trophies_card(d: dict, t: dict) -> str:
         x = 24 + i * (tile_w + gap)
         parts += [
             f'<g class="tp" style="animation-delay:{i * 70}ms; transform-origin:{x + tile_w / 2}px 130px">',
-            f'<rect x="{x}" y="{92}" width="{tile_w}" height="{60}" rx="4" fill="{t["well"]}" stroke="{t["line"]}"/>',
+            f'<rect x="{x}" y="{92}" width="{tile_w}" height="{76}" rx="4" fill="{t["well"]}" stroke="{t["line"]}"/>',
             f'<text x="{x + tile_w / 2}" y="{110}" font-family="{MONO}" font-size="10" fill="{t["muted"]}" text-anchor="middle" letter-spacing="1.5">{esc(label)}</text>',
             f'<text x="{x + tile_w / 2}" y="{132}" font-family="{MONO}" font-size="19" font-weight="700" fill="{t["ink"]}" text-anchor="middle">{esc(value)}</text>',
             f'<text x="{x + tile_w / 2}" y="{146}" font-family="{MONO}" font-size="9" fill="{t["muted"]}" text-anchor="middle">{esc(unit)}</text>',
-            f'<text x="{x + tile_w / 2}" y="{166}" font-family="{MONO}" font-size="9.5" font-weight="700" fill="{tier_fill[rank]}" text-anchor="middle" letter-spacing="1.5">{esc(rank)}</text>',
+            f'<text x="{x + tile_w / 2}" y="{160}" font-family="{MONO}" font-size="9.5" font-weight="700" fill="{tier_fill[rank]}" text-anchor="middle" letter-spacing="1.5">{esc(rank)}</text>',
             "</g>",
         ]
     parts.append("</svg>")
+    return "\n".join(parts)
+
+
+def activity_card(d: dict, t: dict) -> str:
+    """Weekly contributions over the last 26 weeks, as an area chart.
+
+    Replaces github-readme-activity-graph, the last third-party widget, which
+    went blank like the others. No total is printed, only the shape and the
+    peak, so a repo-scoped token's partial view cannot be read as a claim.
+    """
+    weeks = d["weekly"][-26:]
+    if len(weeks) < 4:
+        raise RuntimeError("no contribution calendar")
+    w, h = 980, 240
+    x0, x1, y0, y1 = 48, w - 32, 200, 92
+    peak = max(c for _, c in weeks) or 1
+    step = (x1 - x0) / (len(weeks) - 1)
+    pts = [(x0 + i * step, y0 - (c / peak) * (y0 - y1)) for i, (_, c) in enumerate(weeks)]
+    line = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    area = f"M{x0},{y0} L" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts) + f" L{x1},{y0} Z"
+    lx, ly = pts[-1]
+    parts = frame(t, w, h, "$ git log --since=26.weeks | chart", "ACTIVITY", "Public contribution activity, last 26 weeks")
+    parts.insert(
+        2,
+        "<defs>"
+        f'<linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["accent"]}" stop-opacity=".45"/>'
+        f'<stop offset="1" stop-color="{t["accent"]}" stop-opacity="0"/></linearGradient>'
+        "<style>.ping{transform-box:fill-box;transform-origin:center;animation:ping 2s ease-out infinite}"
+        "@keyframes ping{from{transform:scale(1);opacity:1}to{transform:scale(3);opacity:0}}"
+        "@media (prefers-reduced-motion:reduce){.ping{animation:none}}</style></defs>",
+    )
+    for g in range(4):
+        gy = y1 + g * (y0 - y1) / 3
+        parts.append(f'<line x1="{x0}" y1="{gy:.1f}" x2="{x1}" y2="{gy:.1f}" stroke="{t["line"]}" stroke-dasharray="2 6"/>')
+    parts += [
+        f'<path d="{area}" fill="url(#ar)"/>',
+        f'<polyline points="{line}" fill="none" stroke="{t["accent"]}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>',
+        f'<circle class="ping" cx="{lx:.1f}" cy="{ly:.1f}" r="5" fill="none" stroke="{t["accent"]}" stroke-width="2"/>',
+        f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="4.5" fill="{t["accent"]}"/>',
+        f'<text x="{x0}" y="{y0 + 24}" font-family="{MONO}" font-size="10.5" fill="{t["muted"]}">{esc(weeks[0][0])}</text>',
+        f'<text x="{x1}" y="{y0 + 24}" font-family="{MONO}" font-size="10.5" fill="{t["muted"]}" text-anchor="end">this week</text>',
+        f'<text x="{x1}" y="62" font-family="{MONO}" font-size="11" fill="{t["muted"]}" text-anchor="end">peak {peak} / week</text>',
+        "</svg>",
+    ]
     return "\n".join(parts)
 
 
@@ -582,6 +641,7 @@ CARDS = {
     "showcase": (lambda d, work, t: showcase_card(d, t), 980),
     "trophies": (lambda d, work, t: trophies_card(d, t), 980),
     "casestudies": (lambda d, work, t: casestudies_card(work, t), 980),
+    "activity": (lambda d, work, t: activity_card(d, t), 980),
 }
 
 
