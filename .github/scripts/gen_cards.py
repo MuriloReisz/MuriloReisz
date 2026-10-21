@@ -40,22 +40,22 @@ OUT = pathlib.Path(os.environ.get("OUT_DIR", "dist"))
 # disappears on white.
 THEMES: dict[str, dict[str, str]] = {
     "dark": {
-        "bg": "#0d0d10",
-        "accent": "#a78bfa",
-        "accent2": "#6d5ef0",
+        "bg": "#000000",
+        "accent": "#2997ff",
+        "accent2": "#0066cc",
         "ink": "#f5f5f7",
         "muted": "#8a8a90",
-        "line": "rgba(167,139,250,0.30)",
-        "well": "rgba(167,139,250,0.10)",
+        "line": "rgba(41,151,255,0.30)",
+        "well": "rgba(41,151,255,0.10)",
     },
     "light": {
         "bg": "#ffffff",
-        "accent": "#6d5ef0",
-        "accent2": "#4c3fb5",
-        "ink": "#0d0d10",
+        "accent": "#0066cc",
+        "accent2": "#004c99",
+        "ink": "#000000",
         "muted": "#5f5f68",
-        "line": "rgba(76,63,181,0.28)",
-        "well": "rgba(109,94,240,0.10)",
+        "line": "rgba(0,76,153,0.28)",
+        "well": "rgba(0,102,204,0.10)",
     },
 }
 
@@ -331,7 +331,7 @@ def langs_card(d: dict, t: dict) -> str:
     ranked = [(k, v) for k, v in ranked if v / grand >= 0.005]
     top = ranked[:6]
     total = sum(v for _, v in top) or 1
-    ramp = ["#a78bfa", "#8b7cf5", "#6d5ef0", "#5b4fd6", "#4c3fb5", "#3b3191"]
+    ramp = ["#2997ff", "#3d8bfd", "#0066cc", "#0059b3", "#004c99", "#003366"]
 
     h = 92 + len(top) * 34
     parts = frame(

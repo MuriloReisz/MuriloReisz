@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Cork AI Consulting offer ladder. No prices on purpose: offer.md is the
+     only place prices live. A pulse travels the line and lights each step. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 270" width="1200" height="270" role="img" aria-label="How Cork AI Consulting works: meetup, discovery call, AI assessment, implementation, AI concierge">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#0a1a33"/></linearGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2997ff" stop-opacity="0"/><stop offset="1" stop-color="#2997ff"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#2997ff" stroke-opacity="0.06"/></pattern>
+    <style>
+      .lit   { opacity: 0; animation: lit 6s ease-in-out infinite; }
+      .runner{ animation: run 6s linear infinite; }
+      .dash  { animation: dash 1.2s linear infinite; }
+      @keyframes lit  { 0%,100% { opacity: 0; } 8%,30% { opacity: 1; } 45% { opacity: 0; } }
+      @keyframes run  { 0% { transform: translateX(0); } 100% { transform: translateX(940px); } }
+      @keyframes dash { to { stroke-dashoffset: -16; } }
+      @media (prefers-reduced-motion: reduce) { .lit,.runner,.dash { animation: none; } .lit { opacity: .6; } }
+    </style>
+  </defs>
+  <rect width="1200" height="270" rx="14" fill="url(#bg)"/>
+  <rect width="1200" height="270" rx="14" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="1199" height="269" rx="14" fill="none" stroke="#2997ff" stroke-opacity="0.25"/>
+  <text x="40" y="48" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#2997ff" letter-spacing="2">$ cork-ai --how-we-work</text>
+  <text x="1160" y="48" text-anchor="end" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#6e7681" letter-spacing="1.5">FOR CORK &amp; MUNSTER BUSINESSES</text>
+  <line class="dash" x1="130" y1="150" x2="1070" y2="150" stroke="#2997ff" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="8 8"/>
+  <g class="runner"><rect x="70" y="148" width="60" height="4" rx="2" fill="url(#trail)"/><circle cx="130" cy="150" r="6" fill="#ffffff"/><circle cx="130" cy="150" r="12" fill="#2997ff" fill-opacity="0.35"/></g>
+  
+    <g>
+      <circle cx="130" cy="150" r="34" fill="#050a14" stroke="#2997ff" stroke-opacity="0.35" stroke-width="1.5"/>
+      <circle class="lit" style="animation-delay:0.0s" cx="130" cy="150" r="34" fill="#0066cc" fill-opacity="0.25" stroke="#2997ff" stroke-width="2"/>
+      <text x="130" y="157" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="19" font-weight="700" fill="#f5f5f7">01</text>
+      <text x="130" y="212" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#cfe5ff" letter-spacing="1.4">MEETUP</text>
+      <text x="130" y="232" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#8b949e">free · monthly</text>
+    </g>
+    <g>
+      <circle cx="365" cy="150" r="34" fill="#050a14" stroke="#2997ff" stroke-opacity="0.35" stroke-width="1.5"/>
+      <circle class="lit" style="animation-delay:1.2s" cx="365" cy="150" r="34" fill="#0066cc" fill-opacity="0.25" stroke="#2997ff" stroke-width="2"/>
+      <text x="365" y="157" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="19" font-weight="700" fill="#f5f5f7">02</text>
+      <text x="365" y="212" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#cfe5ff" letter-spacing="1.4">DISCOVERY CALL</text>
+      <text x="365" y="232" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#8b949e">free · 30 min</text>
+    </g>
+    <g>
+      <circle cx="600" cy="150" r="34" fill="#050a14" stroke="#2997ff" stroke-opacity="0.35" stroke-width="1.5"/>
+      <circle class="lit" style="animation-delay:2.4s" cx="600" cy="150" r="34" fill="#0066cc" fill-opacity="0.25" stroke="#2997ff" stroke-width="2"/>
+      <text x="600" y="157" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="19" font-weight="700" fill="#f5f5f7">03</text>
+      <text x="600" y="212" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#cfe5ff" letter-spacing="1.4">AI ASSESSMENT</text>
+      <text x="600" y="232" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#8b949e">find the 5+ hours</text>
+    </g>
+    <g>
+      <circle cx="835" cy="150" r="34" fill="#050a14" stroke="#2997ff" stroke-opacity="0.35" stroke-width="1.5"/>
+      <circle class="lit" style="animation-delay:3.5999999999999996s" cx="835" cy="150" r="34" fill="#0066cc" fill-opacity="0.25" stroke="#2997ff" stroke-width="2"/>
+      <text x="835" y="157" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="19" font-weight="700" fill="#f5f5f7">04</text>
+      <text x="835" y="212" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#cfe5ff" letter-spacing="1.4">IMPLEMENTATION</text>
+      <text x="835" y="232" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#8b949e">done for you</text>
+    </g>
+    <g>
+      <circle cx="1070" cy="150" r="34" fill="#050a14" stroke="#2997ff" stroke-opacity="0.35" stroke-width="1.5"/>
+      <circle class="lit" style="animation-delay:4.8s" cx="1070" cy="150" r="34" fill="#0066cc" fill-opacity="0.25" stroke="#2997ff" stroke-width="2"/>
+      <text x="1070" y="157" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="19" font-weight="700" fill="#f5f5f7">05</text>
+      <text x="1070" y="212" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" font-weight="700" fill="#cfe5ff" letter-spacing="1.4">AI CONCIERGE</text>
+      <text x="1070" y="232" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#8b949e">ongoing support</text>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 14" width="1200" height="14" role="presentation">
+  <defs>
+    <linearGradient id="l" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0066cc" stop-opacity="0"/><stop offset=".5" stop-color="#0066cc" stop-opacity=".6"/><stop offset="1" stop-color="#0066cc" stop-opacity="0"/></linearGradient>
+    <radialGradient id="p"><stop offset="0" stop-color="#9cc9ff"/><stop offset="1" stop-color="#2997ff" stop-opacity="0"/></radialGradient>
+    <style>.p { animation: m 5s ease-in-out infinite alternate; } @keyframes m { from { transform: translateX(0); } to { transform: translateX(1080px); } } @media (prefers-reduced-motion: reduce) { .p { animation: none; } }</style>
+  </defs>
+  <rect y="6" width="1200" height="2" fill="url(#l)"/>
+  <ellipse class="p" cx="60" cy="7" rx="60" ry="7" fill="url(#p)"/>
+</svg>

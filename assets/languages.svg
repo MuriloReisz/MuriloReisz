@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 250" width="580" height="250" role="img" aria-label="Languages: Portuguese native, English C2, Spanish C1, French B2, Italian B2">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#0a1a33"/></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0066cc"/><stop offset="1" stop-color="#2997ff"/></linearGradient>
+    <linearGradient id="sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <style>
+      .shine { animation: shine 3.2s ease-in-out infinite; }
+      @keyframes shine { 0% { transform: translateX(0); } 60%,100% { transform: translateX(360px); } }
+      @media (prefers-reduced-motion: reduce) { .shine { animation: none; opacity: 0; } }
+    </style>
+  </defs>
+  <rect width="580" height="250" rx="14" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="579" height="249" rx="14" fill="none" stroke="#2997ff" stroke-opacity="0.25"/>
+  <text x="32" y="40" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#2997ff" letter-spacing="2">$ locale -a</text>
+  
+  <text x="32" y="83" font-size="17">🇧🇷</text>
+  <text x="64" y="83" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#f5f5f7">Português</text>
+  <rect x="180" y="72" width="300" height="10" rx="5" fill="#2997ff" fill-opacity="0.12"/>
+  <rect x="180" y="72" width="300" height="10" rx="5" fill="url(#g)"/>
+  <g clip-path="url(#c0)"><rect class="shine" style="animation-delay:0.0s" x="140" y="72" width="40" height="10" fill="url(#sh)"/></g>
+  <clipPath id="c0"><rect x="180" y="72" width="300" height="10" rx="5"/></clipPath>
+  <text x="548" y="82" text-anchor="end" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#2997ff">native</text>
+  <text x="32" y="117" font-size="17">🇬🇧</text>
+  <text x="64" y="117" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#f5f5f7">English</text>
+  <rect x="180" y="106" width="300" height="10" rx="5" fill="#2997ff" fill-opacity="0.12"/>
+  <rect x="180" y="106" width="285" height="10" rx="5" fill="url(#g)"/>
+  <g clip-path="url(#c1)"><rect class="shine" style="animation-delay:0.3s" x="140" y="106" width="40" height="10" fill="url(#sh)"/></g>
+  <clipPath id="c1"><rect x="180" y="106" width="285" height="10" rx="5"/></clipPath>
+  <text x="548" y="116" text-anchor="end" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#2997ff">C2</text>
+  <text x="32" y="151" font-size="17">🇪🇸</text>
+  <text x="64" y="151" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#f5f5f7">Español</text>
+  <rect x="180" y="140" width="300" height="10" rx="5" fill="#2997ff" fill-opacity="0.12"/>
+  <rect x="180" y="140" width="240" height="10" rx="5" fill="url(#g)"/>
+  <g clip-path="url(#c2)"><rect class="shine" style="animation-delay:0.6s" x="140" y="140" width="40" height="10" fill="url(#sh)"/></g>
+  <clipPath id="c2"><rect x="180" y="140" width="240" height="10" rx="5"/></clipPath>
+  <text x="548" y="150" text-anchor="end" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#2997ff">C1</text>
+  <text x="32" y="185" font-size="17">🇫🇷</text>
+  <text x="64" y="185" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#f5f5f7">Français</text>
+  <rect x="180" y="174" width="300" height="10" rx="5" fill="#2997ff" fill-opacity="0.12"/>
+  <rect x="180" y="174" width="186" height="10" rx="5" fill="url(#g)"/>
+  <g clip-path="url(#c3)"><rect class="shine" style="animation-delay:0.8999999999999999s" x="140" y="174" width="40" height="10" fill="url(#sh)"/></g>
+  <clipPath id="c3"><rect x="180" y="174" width="186" height="10" rx="5"/></clipPath>
+  <text x="548" y="184" text-anchor="end" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#2997ff">B2</text>
+  <text x="32" y="219" font-size="17">🇮🇹</text>
+  <text x="64" y="219" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="13" fill="#f5f5f7">Italiano</text>
+  <rect x="180" y="208" width="300" height="10" rx="5" fill="#2997ff" fill-opacity="0.12"/>
+  <rect x="180" y="208" width="186" height="10" rx="5" fill="url(#g)"/>
+  <g clip-path="url(#c4)"><rect class="shine" style="animation-delay:1.2s" x="140" y="208" width="40" height="10" fill="url(#sh)"/></g>
+  <clipPath id="c4"><rect x="180" y="208" width="186" height="10" rx="5"/></clipPath>
+  <text x="548" y="218" text-anchor="end" font-family="ui-monospace, 'JetBrains Mono', Menlo, monospace" font-size="12" fill="#2997ff">B2</text>
+</svg>

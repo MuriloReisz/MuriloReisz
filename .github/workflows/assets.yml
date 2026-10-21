@@ -63,10 +63,10 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          # Violet ramp matching muriloreisz.com.
+          # Cork AI Consulting blue ramp.
           outputs: |
-            dist/snake-dark.svg?palette=github-dark&color_snake=%23a78bfa&color_dots=%23161b22,%234c3fb5,%236d5ef0,%238b7cf5,%23c4b5fd
-            dist/snake.svg?color_snake=%23a78bfa&color_dots=%23ede9fe,%23c4b5fd,%238b7cf5,%236d5ef0,%234c3fb5
+            dist/snake-dark.svg?palette=github-dark&color_snake=%232997ff&color_dots=%23161b22,%23004c99,%230066cc,%233d8bfd,%239cc9ff
+            dist/snake.svg?color_snake=%232997ff&color_dots=%23dbeafe,%239cc9ff,%233d8bfd,%230066cc,%23004c99
 
       - name: Make sure the runner still owns what it is about to publish
         run: sudo chown -R "$(id -u):$(id -g)" dist
