@@ -57,18 +57,18 @@ Start with a free 30-minute Discovery Call, or come to the free monthly meetup.
 <!-- FEED:START -->
 ```console
 murilo@cork:~$ ls -t ~/cork-ai/blog | head -5
+2026-11-04  [ai by sector]  AI for Irish charities and nonprofits
 2026-10-18  [buying ai]  Your first 90 days with AI, in order
 2026-10-16  [ai by sector]  AI for Irish quantity surveyors: the paperwork, not the measure
 2026-10-15  [using ai safely]  Should you tell customers you use AI?
 2026-10-14  [buying ai]  Training your team on AI in an hour
-2026-10-13  [using ai safely]  What to do when AI gets it wrong in front of a customer
 ```
 
+- [AI for Irish charities and nonprofits](https://www.corkaiconsulting.ie/blog/ai-for-charities-nonprofits-ireland) · `2026-11-04`
 - [Your first 90 days with AI, in order](https://www.corkaiconsulting.ie/blog/first-90-days-with-ai) · `2026-10-18`
 - [AI for Irish quantity surveyors: the paperwork, not the measure](https://www.corkaiconsulting.ie/blog/ai-for-quantity-surveyors-ireland) · `2026-10-16`
 - [Should you tell customers you use AI?](https://www.corkaiconsulting.ie/blog/should-you-tell-customers-you-use-ai) · `2026-10-15`
 - [Training your team on AI in an hour](https://www.corkaiconsulting.ie/blog/ai-training-your-team-one-hour) · `2026-10-14`
-- [What to do when AI gets it wrong in front of a customer](https://www.corkaiconsulting.ie/blog/what-to-do-when-ai-gets-it-wrong) · `2026-10-13`
 <!-- FEED:END -->
 
 <p align="center"><img src="https://raw.githubusercontent.com/MuriloReisz/MuriloReisz/main/assets/divider.svg" width="100%" alt="" /></p>
